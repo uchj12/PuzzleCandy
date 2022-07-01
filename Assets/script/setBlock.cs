@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -17,7 +17,6 @@ public class setBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         gameObject = GameObject.Find("EventSystem");
     }
 
@@ -28,20 +27,15 @@ public class setBlock : MonoBehaviour
     }
 
 
-    public void Color_judgement()
+    public void Color_judgement()//ピースがはめられるなら色を変える
     {
         deleteflag = false;
         this.transform.position = new Vector3(Mathf.Floor(this.transform.position.x + 0.5f), Mathf.Floor(this.transform.position.y + 0.5f), Mathf.Floor(this.transform.position.z));
         for (int i = 0; i < Train.Length; i++)
         {
-            if (gameObject.GetComponent<Gamesystem>().Check(Train[i]))
-            {
-             
-            }
-            else
+            if (!gameObject.GetComponent<Gamesystem>().Check(Train[i]))
             {
                 deleteflag = true;
-
             }
         }
         if (deleteflag == false)
@@ -49,9 +43,7 @@ public class setBlock : MonoBehaviour
 
             for (int i = 0; i < Train.Length; i++)
             {
-
-                //gameObject.GetComponent<Gamesystem>().Color_OFF();
-                ReleaseColor();
+                ReleaseColor();//色を元に戻す
                 gameObject.GetComponent<Gamesystem>().Color_ON(Train[i]);
             }
         }
@@ -60,17 +52,13 @@ public class setBlock : MonoBehaviour
         }
     }
 
-    public void judgement()
+    public void judgement()//ピースをはめられるかのチェック
     {
         deleteflag = false;
         this.transform.position = new Vector3(Mathf.Floor(this.transform.position.x + 0.5f), Mathf.Floor(this.transform.position.y + 0.5f), Mathf.Floor(this.transform.position.z));
         for (int i = 0; i < Train.Length; i++)
         {
-            if (gameObject.GetComponent<Gamesystem>().Check(Train[i]))
-            {
-
-            }
-            else
+            if (!gameObject.GetComponent<Gamesystem>().Check(Train[i]))
             {
                 deleteflag = true;
             }
@@ -82,23 +70,23 @@ public class setBlock : MonoBehaviour
 
             for (int i = 0; i < Train.Length; i++)
             {
-                gameObject.GetComponent<Gamesystem>().setObject(Train[i]);
+                gameObject.GetComponent<Gamesystem>().setObject(Train[i]);　//ピースをはめる
             }
             DestroyImmediate(this.Object);
-            gameObject.GetComponent<Gamesystem>().randomcreate();
+            gameObject.GetComponent<Gamesystem>().randomcreate(); //ランダムなピースを生成
 
-            gameObject.GetComponent<Gamesystem>().ObjectDelete();
+            gameObject.GetComponent<Gamesystem>().ObjectDelete(); //ピースが消せるなら消す
 
             DOVirtual.DelayedCall(0.5f,
             () =>
             {
-                gameObject.GetComponent<Gamesystem>().clearcheck();
+                gameObject.GetComponent<Gamesystem>().clearcheck(); //まⅮあピースgあはめられるかのチェック
             }
             );
         }
     }
 
-    public void grabpiece()
+    public void grabpiece()//ピースを持った時にピースをずらして持つ
     {
         for (int i = 0; i < Train.Length; i++)
         {
@@ -106,7 +94,7 @@ public class setBlock : MonoBehaviour
         }
     }
 
-    public void ChangeColorPiece()
+    public void ChangeColorPiece()//色を変える
     {
         for (int i = 0; i < Train.Length; i++)
         {
@@ -114,7 +102,7 @@ public class setBlock : MonoBehaviour
         }
     }
 
-    public void ReleaseColor()
+    public void ReleaseColor()//色を元に戻す
     {
         for (int i = 0; i < Train.Length; i++)
         {

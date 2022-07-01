@@ -19,16 +19,16 @@ public class SceneChange : MonoBehaviour
     {
 
     }
-    public void scenechange()
+    public void scenechange()//シーンを変える
     {
-        panel.SetActive(true);
-        panel.GetComponent<heedout>().isFadeOut = true;
+        panel.SetActive(true);//フェードを起動
+        panel.GetComponent<fadeout>().isFadeOut = true;
+        //処理を送らせてシーンを変える
         DOVirtual.DelayedCall(0.3f,
            () =>
            {
-            
-               SceneManager.LoadScene(SceneNumber);
                OptionPanel.SetActive(false);
+               SceneManager.LoadScene(SceneNumber);
            }
        );
     }

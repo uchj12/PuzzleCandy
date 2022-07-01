@@ -11,17 +11,14 @@ public class createBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //touchWorldPosition = gameCamera.ScreenToWorldPoint(touchScreenPosition);
+
         m_object = Instantiate(m_object, touchWorldPosition, Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    gameObject.GetComponent<Gamesystem>().create(BuildObject,m_object.transform.position);
-        //}
+
         Vector3 touchScreenPosition = Input.mousePosition;
 
         touchScreenPosition.x = Mathf.Clamp(touchScreenPosition.x, 0.0f, Screen.width);

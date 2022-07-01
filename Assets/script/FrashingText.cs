@@ -21,7 +21,7 @@ public class FrashingText : MonoBehaviour
         text.color = GetAlphaColor(text.color);
     }
 
-    Color GetAlphaColor(Color color)
+    Color GetAlphaColor(Color color)//•¶Žš‚ð‚¿‚©‚¿‚©‚³‚¹‚é
     {
         time += Time.deltaTime * 5.0f * speed;
         color.a = Mathf.Sin(time);

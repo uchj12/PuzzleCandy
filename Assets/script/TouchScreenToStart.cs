@@ -12,7 +12,7 @@ public class TouchScreenToStart : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//画面タップで次のシーンへ
     {
         if (Input.GetMouseButtonUp(0))
         {
