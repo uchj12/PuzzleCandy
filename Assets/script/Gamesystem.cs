@@ -191,11 +191,11 @@ public class Gamesystem : MonoBehaviour
         sound1.PlayOneShot(sound1.clip);//‚Í‚ß‚½Žž‚Ì‰¹
         for (int i = 0; i < 9; i += 3)
         {
-            ChangeColorflag = true;
             for (int j = 0; j < 9; j += 3)
             {
+                ChangeColorflag = true;
                 //‚R~‚R‚ª‚Í‚Ü‚Á‚Ä‚¢‚é‚©‚ÌŠm”F
-               for(int x = 0; x < 3;x++)
+                for (int x = 0; x < 3;x++)
                 {
                     for (int y = 0; y < 3; y++)
                     { 

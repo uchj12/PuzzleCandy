@@ -1697,7 +1697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 400, y: 99.99988}
+  m_AnchoredPosition: {x: 400.00006, y: 99.99988}
   m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &246070615
@@ -2467,10 +2467,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 383346206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8d00f49d4475f4ca8f2c4351931229, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eab9182d2f41a8438ec4a7a5922702a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFadeOut: 1
+  isFadeOut: 0
 --- !u!114 &383346208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3289,9 +3289,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.34718606
     y: 0
-    width: 1
+    width: 0.30562788
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -6026,7 +6026,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1184284894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8d00f49d4475f4ca8f2c4351931229, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eab9182d2f41a8438ec4a7a5922702a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFadeOut: 0

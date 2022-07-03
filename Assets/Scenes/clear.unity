@@ -317,9 +317,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.34718606
     y: 0
-    width: 1
+    width: 0.30562788
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -591,6 +591,7 @@ GameObject:
   - component: {fileID: 1187764133}
   - component: {fileID: 1187764132}
   - component: {fileID: 1187764131}
+  - component: {fileID: 1187764134}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -646,6 +647,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187764134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187764130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bcf044ff1527a4cb38d41380fbb8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 584443622}
+  aspectVec: {x: 1125, y: 2436}
 --- !u!1 &1333695245
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +674,7 @@ GameObject:
   - component: {fileID: 1333695248}
   - component: {fileID: 1333695247}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: fadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,10 +708,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1333695245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a8d00f49d4475f4ca8f2c4351931229, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eab9182d2f41a8438ec4a7a5922702a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFadeOut: 1
+  isFadeOut: 0
 --- !u!114 &1333695248
 MonoBehaviour:
   m_ObjectHideFlags: 0
